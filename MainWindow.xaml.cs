@@ -56,6 +56,7 @@ namespace U3Hangman
             if (txtGuessFinal.Text.ToLower() == word)
             {
                 lblWord.Content = word;
+                timeswrong++;
                 MessageBox.Show("You Win");
                 Environment.Exit(0);
             }
