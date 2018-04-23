@@ -1,0 +1,51 @@
+<Window x:Class="U3Hangman.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:U3Hangman"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="650" MaxHeight="450" MaxWidth="650">
+    <Grid>
+        <Button x:Name="btnA" Content="A" Visibility="Visible" Height="20" Width="40" Margin="124,196,353,103" Click="btnA_Click"/>
+        <Button x:Name="btnB" Content="B" Visibility="Visible" Height="20" Width="40" Margin="169,196,308,103" Click="btnB_Click"/>
+        <Button x:Name="btnC" Content="C" Visibility="Visible" Height="20" Width="40" RenderTransformOrigin="0.488,1.627" Margin="214,196,263,103" Click="btnC_Click"/>
+        <Button x:Name="btnD" Content="D" Visibility="Visible" Height="20" Width="40" Margin="259,196,218,103" Click="btnD_Click"/>
+        <Button x:Name="btnE" Content="E" Visibility="Visible" Height="20" Width="40" Margin="304,196,173,103" Click="btnE_Click"/>
+        <Button x:Name="btnF" Content="F" Visibility="Visible" Height="20" Width="40" Margin="349,196,128,103" Click="btnF_Click"/>
+        <Button x:Name="btnG" Content="G" Visibility="Visible" Height="20" Width="40" Margin="34,221,443,78" Click="btnG_Click"/>
+        <Button x:Name="btnH" Content="H" Visibility="Visible" Height="20" Width="40" RenderTransformOrigin="-2.771,2.946" Margin="79,221,398,78" Click="btnH_Click"/>
+        <Button x:Name="btnI" Content="I" Visibility="Visible" Height="20" Width="40" Margin="124,221,353,78" Click="btnI_Click"/>
+        <Button x:Name="btnJ" Content="J" Visibility="Visible" Height="20" Width="40" Margin="169,221,308,78" Click="btnJ_Click"/>
+        <Button x:Name="btnK" Content="K" Visibility="Visible" Height="20" Width="40" Margin="214,221,263,78" Click="btnK_Click"/>
+        <Button x:Name="btnL" Content="L" Visibility="Visible" Height="20" Width="40" Margin="259,221,218,78" Click="btnL_Click"/>
+        <Button x:Name="btnM" Content="M" Visibility="Visible" Height="20" Width="40" Margin="304,221,173,78" Click="btnM_Click"/>
+        <Button x:Name="btnN" Content="N" Visibility="Visible" Height="20" Width="40" Margin="349,221,128,78" Click="btnN_Click"/>
+        <Button x:Name="btnO" Content="O" Visibility="Visible" Height="20" Width="40" Margin="394,221,83,78" Click="btnO_Click"/>
+        <Button x:Name="btnP" Content="P" Visibility="Visible" Height="20" Width="40" Margin="439,221,38,78" Click="btnP_Click"/>
+        <Button x:Name="btnQ" Content="Q" Visibility="Visible" Height="20" Width="40" Margin="34,246,443,53" Click="btnQ_Click"/>
+        <Button x:Name="btnR" Content="R" Visibility="Visible" Height="20" Width="40" Margin="79,246,398,53" Click="btnR_Click"/>
+        <Button x:Name="btnS" Content="S" Visibility="Visible" Height="20" Width="40" Margin="124,246,353,53" Click="btnS_Click"/>
+        <Button x:Name="btnT" Content="T" Visibility="Visible" Height="20" Width="40" Margin="169,246,308,53" Click="btnT_Click"/>
+        <Button x:Name="btnU" Content="U" Visibility="Visible" Height="20" Width="40" Margin="214,246,263,53" Click="btnU_Click"/>
+        <Button x:Name="btnV" Content="V" Visibility="Visible" Height="20" Width="40" Margin="259,246,218,53" Click="btnV_Click"/>
+        <Button x:Name="btnW" Content="W" Visibility="Visible" Height="20" Width="40" Margin="304,246,173,53" Click="btnW_Click"/>
+        <Button x:Name="btnX" Content="X" Visibility="Visible" Height="20" Width="40" Margin="349,246,128,53" Click="btnX_Click"/>
+        <Button x:Name="btnY" Content="Y" Visibility="Visible" Height="20" Width="40" Margin="394,246,83,53" Click="btnY_Click"/>
+        <Button x:Name="btnZ" Content="Z" Visibility="Visible" Height="20" Width="40" Margin="439,246,38,53" RenderTransformOrigin="0.826,0.591" Click="btnZ_Click"/>
+        <TextBox x:Name="txtGuessFinal" Text="Guess Answer"  Height="20" Margin="0,272,0,27" TextChanged="txtGuessFinal_TextChanged"/>
+
+        <Button x:Name="btnFinalGuess" Content="Check" Click="btnFinalGuess_Click" Height="20" Width="250" Margin="124,297,143,2"/>
+        <Label x:Name="lblWord" Content="" FontSize="30" Margin="40,169,280,191"/>
+        <Line x:Name="lin1" Stroke="Black" StrokeThickness="2" X1="540" Y1="250" X2="460" Y2="250" />
+        <Line x:Name="lin2" Stroke="Black" StrokeThickness="2" X1="500" Y1="15" X2="500" Y2="250" />
+        <Line x:Name="lin3" Stroke="Black" StrokeThickness="2" X1="500" Y1="15" X2="570" Y2="15"/>
+        <Line x:Name="lin4" Stroke="Black" StrokeThickness="2" X1="570" Y1="15" X2="570" Y2="35"/>
+        <Ellipse x:Name="elpsHead" Stroke="Black" StrokeThickness="2" Margin="549,36,44,334" RenderTransformOrigin="0.425,0.618" Visibility="Hidden"/>
+        <Line x:Name="linBody" Stroke="Black" StrokeThickness="2" X1="570" Y1="150" X2="570" Y2="75" Visibility="Hidden"/>
+        <Line x:Name="linLegLeft" Stroke="Black" StrokeThickness="2" X1="520" Y1="200" X2="570" Y2="150" Visibility="Hidden"/>
+        <Line x:Name="linLegRight" Stroke="Black" StrokeThickness="2" X1="620" Y1="200" X2="570" Y2="150" Visibility="Hidden"/>
+        <Line x:Name="linArmLeft" Stroke="Black" StrokeThickness="2" X1="520" Y1="80" X2="570" Y2="100" Visibility="Hidden"/>
+        <Line x:Name="linArmRight" Stroke="Black" StrokeThickness="2" X1="620" Y1="80" X2="570" Y2="100" Visibility="Hidden"/>
+    </Grid>
+</Window>
